@@ -232,4 +232,4 @@ To install:
 - For Lua, run “luarocks make LuaAPI/rocks/coco-scm-1.rockspec” under coco/
 
 
-Note: This project is a part of [Udacity Computer Vision Nanodegree Program](https://www.udacity.com/course/computer-vision-nanodegree--nd891).
+Note: This project is a part of [Udacity Computer Vision Nanodegree Program](https://www.udacity.com/course/computer-vision-nanodegree--nd891).# ImageCaptioning
