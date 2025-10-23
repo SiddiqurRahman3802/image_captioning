@@ -9,7 +9,7 @@ from data_loader import get_loader
 from model import DecoderRNN, EncoderCNN
 from nlp_utils import clean_sentence
 
-cocoapi_dir = r"path/to/cocoapi/dir"
+cocoapi_dir = r"F:\ImageCaptioningDataset\dataset"
 
 # # Defining a transform to pre-process the testing images.
 transform_test = transforms.Compose(
@@ -48,8 +48,8 @@ encoder.eval()
 decoder.eval()
 
 # Load the trained weights.
-encoder.load_state_dict(torch.load(os.path.join("./models", encoder_file)))
-decoder.load_state_dict(torch.load(os.path.join("./models", decoder_file)))
+encoder.load_state_dict(torch.load(os.path.join("F:\ImageCaptioningDataset\image_captioning\models", encoder_file)))
+decoder.load_state_dict(torch.load(os.path.join("F:\ImageCaptioningDataset\image_captioning\models", decoder_file)))
 
 # Move models to GPU if CUDA is available.
 encoder.to(device)

@@ -53,9 +53,9 @@ def get_loader(
             assert os.path.exists(
                 vocab_file
             ), "vocab_file does not exist.  Change vocab_from_file to False to create vocab_file."
-        img_folder = os.path.join(cocoapi_loc, "cocoapi/images/train2014/")
+        img_folder = os.path.join(cocoapi_loc, "train2017")
         annotations_file = os.path.join(
-            cocoapi_loc, "cocoapi/annotations/captions_train2014.json"
+            cocoapi_loc, "annotations/captions_train2017.json"
         )
     elif mode == "test":
         assert batch_size == 1, "Please change batch_size to 1 if testing the model."
@@ -63,9 +63,9 @@ def get_loader(
             vocab_file
         ), "Must first generate vocab.pkl from training data."
         assert vocab_from_file, "Change vocab_from_file to True."
-        img_folder = os.path.join(cocoapi_loc, "cocoapi/images/test2014/")
+        img_folder = os.path.join(cocoapi_loc, "test2017/")
         annotations_file = os.path.join(
-            cocoapi_loc, "cocoapi/annotations/image_info_test2014.json"
+            cocoapi_loc, "annotations/image_info_test2017.json"
         )
     elif mode == "valid":
         assert batch_size == 1, "Please change batch_size to 1 if testing the model."
@@ -73,9 +73,9 @@ def get_loader(
             vocab_file
         ), "Must first generate vocab.pkl from training data."
         assert vocab_from_file, "Change vocab_from_file to True."
-        img_folder = os.path.join(cocoapi_loc, "cocoapi/images/val2014/")
+        img_folder = os.path.join(cocoapi_loc, "val2017")
         annotations_file = os.path.join(
-            cocoapi_loc, "cocoapi/annotations/captions_val2014.json"
+            cocoapi_loc, "annotations/captions_val2017.json"
         )
     else:
         raise ValueError(f"Invalid mode: {mode}")
